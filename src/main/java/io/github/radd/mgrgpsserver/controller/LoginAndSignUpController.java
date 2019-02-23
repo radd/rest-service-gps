@@ -37,7 +37,8 @@ public class LoginAndSignUpController {
     JwtTokenProvider tokenProvider;
 
     @PostMapping("/sign-up")
-    public ResponseEntity<?> signUp(@RequestBody @Valid SignUpRequest signUpRequest, BindingResult result) {
+    public ResponseEntity<?> signUp(@RequestBody @Valid SignUpRequest signUpRequest,
+                                    BindingResult result) {
         UserResponse userResponse = null;
 
         if(result.hasErrors())
