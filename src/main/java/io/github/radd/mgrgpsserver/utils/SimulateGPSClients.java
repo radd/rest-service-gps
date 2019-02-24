@@ -12,6 +12,8 @@ import java.util.concurrent.ConcurrentHashMap;
 @Component
 public class SimulateGPSClients {
 
+    public boolean isActive = true;
+
     @Autowired
     SimpMessagingTemplate template;
 
@@ -121,6 +123,8 @@ public class SimulateGPSClients {
 
     @Scheduled(fixedDelay = 1000, initialDelay = 100)
     public void simulateClient1() {
+        if(!isActive)
+            return;
         Location loc = locations.get("5c5d6da932bee21b60fca64b");
         loc.setTimestamp(System.currentTimeMillis());
 
@@ -136,6 +140,8 @@ public class SimulateGPSClients {
 
     @Scheduled(fixedDelay = 1000, initialDelay = 200)
     public void simulateClient2() {
+        if(!isActive)
+            return;
         Location loc = locations.get("5c5d6f9232bee21b60fca64c");
         loc.setTimestamp(System.currentTimeMillis());
 
@@ -149,6 +155,8 @@ public class SimulateGPSClients {
 
     @Scheduled(fixedDelay = 1000, initialDelay = 400)
     public void simulateClient3() {
+        if(!isActive)
+            return;
         Location loc = locations.get("5c5eb09032bee23be84a2d9a");
         loc.setTimestamp(System.currentTimeMillis());
 
@@ -162,6 +170,8 @@ public class SimulateGPSClients {
 
     @Scheduled(fixedDelay = 1000, initialDelay = 500)
     public void simulateClient4() {
+        if(!isActive)
+            return;
         Location loc = locations.get("5c5ed13732bee237b824bbb6");
         loc.setTimestamp(System.currentTimeMillis());
 
@@ -175,6 +185,8 @@ public class SimulateGPSClients {
 
     @Scheduled(fixedDelay = 1000, initialDelay = 700)
     public void simulateClient5() {
+        if(!isActive)
+            return;
         Location loc = locations.get("5c5ed1f432bee237b824bbb7");
         loc.setTimestamp(System.currentTimeMillis());
 
@@ -188,6 +200,8 @@ public class SimulateGPSClients {
 
     @Scheduled(fixedDelay = 1000, initialDelay = 800)
     public void simulateClient6() {
+        if(!isActive)
+            return;
         Location loc = locations.get("5c5ed4bc32bee237b824bbb8");
         loc.setTimestamp(System.currentTimeMillis());
 

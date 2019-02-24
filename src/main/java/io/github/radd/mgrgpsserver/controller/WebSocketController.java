@@ -33,6 +33,8 @@ public class WebSocketController {
         //System.out.println("From id:" + fromID);
         //System.out.println(auth.getPrincipal());
 
+        //System.out.println("Delay: " + (System.currentTimeMillis() - location.getTimestamp()));
+
         String userID = (String) auth.getPrincipal(); // userID - saved in JwtAuthenticationFilter
 
         if(!userID.equals(location.getUserID()) || !userID.equals(fromID))

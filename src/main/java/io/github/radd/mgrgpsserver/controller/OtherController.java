@@ -19,4 +19,10 @@ public class OtherController {
         simulateGPSClients.resetClients();
         return ResponseEntity.ok().body("");
     }
+
+    @GetMapping("/toggle-sim")
+    public ResponseEntity<?> toggleSimulation() {
+        simulateGPSClients.isActive = simulateGPSClients.isActive ? false : true;
+        return ResponseEntity.ok().body("");
+    }
 }
