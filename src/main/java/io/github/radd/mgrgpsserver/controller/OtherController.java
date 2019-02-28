@@ -22,7 +22,7 @@ public class OtherController {
 
     @GetMapping("/toggle-sim")
     public ResponseEntity<?> toggleSimulation() {
-        simulateGPSClients.isActive = simulateGPSClients.isActive ? false : true;
+        simulateGPSClients.isActive = !simulateGPSClients.isActive;
         return ResponseEntity.ok().body("");
     }
 }
