@@ -10,5 +10,5 @@ REST service includes:
 
 MongoDB collections:
 
-![mongodb collections](https://radd.github.io/other/images/mongodb_schema.jpg | width=300)
+![mongodb collections](https://radd.github.io/other/images/mongodb_schema.jpg)
 
